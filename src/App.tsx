@@ -1,9 +1,10 @@
+import Articles from "./components/Articles";
 
 function App() {
   return (
     <div>
       <h3>Fyndiq test</h3>
-      List of articles goes here 😎
+      <Articles />
     </div>
   );
 }
