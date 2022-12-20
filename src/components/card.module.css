@@ -1,0 +1,66 @@
+.card {
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out 0s;
+  box-shadow: rgb(0 0 0 / 8%) 0px 2px 4px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.imageContainer {
+  height: 300px;
+  max-width: 200px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  overflow: hidden;
+}
+
+.price {
+  font-weight: 800;
+  color: rgb(255, 87, 118);
+}
+
+.description {
+  display: block;
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sold {
+  font-weight: 700;
+  color: rgb(64, 64, 64);
+}
+
+.details {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+
+.date {
+  margin: 0 0 0 4px;
+  color: rgb(0, 131, 138);
+}
+
+.basketIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  border: 2px solid rgb(0, 131, 138);
+}
+
+.priceContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px;
+}

@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
+import Card from "./Card";
+import styles from "./articles.module.css";
 import { getArticles } from "../api/Articles";
-import { Article } from "../types";
+import ArticleModal from "../modals/Article";
+import { RawArticle } from "../types";
 
-type ArticlesArray = Array<Article>;
+type ArticlesArray = Array<RawArticle>;
 
-const Articles: React.FC = () => {
+const Articles = () => {
   const [articles, setArticles] = useState<ArticlesArray>([]);
 
   const loadArticles = async () => {
@@ -17,9 +20,15 @@ const Articles: React.FC = () => {
     loadArticles();
   }, []);
 
-  console.log(articles);
-
-  return <div>{articles.length < 0 && <p>loading...</p>}</div>;
+  return (
+    <div className={styles.container}>
+      <div className={styles.articles}>
+        {articles.length < 0 && <p>loading...</p>}
+        {articles.length > 0 &&
+          articles.map((article) => Card(new ArticleModal(article)))}
+      </div>
+    </div>
+  );
 };
 
 export default Articles;

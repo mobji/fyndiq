@@ -1,0 +1,18 @@
+.articles {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 600px) {
+  .articles {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .articles {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
