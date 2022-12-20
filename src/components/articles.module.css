@@ -5,6 +5,16 @@
   gap: 16px;
 }
 
+.label {
+  color: rgb(0, 131, 138);
+  font-weight: 700;
+  margin-left: 8px;
+}
+
+.container {
+  margin: 25px;
+}
+
 @media (min-width: 600px) {
   .articles {
     grid-template-columns: repeat(3, 1fr);

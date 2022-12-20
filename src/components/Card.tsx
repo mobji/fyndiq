@@ -4,6 +4,7 @@ import { Fire } from "../static/images/icons/Fire";
 import { Shipping } from "../static/images/icons/Shipping";
 import styles from "./card.module.css";
 import Section from "./Section";
+import StarRating from "./Star";
 
 export interface Article {
   articleId: string;
@@ -12,6 +13,7 @@ export interface Article {
   price: number;
   description: string;
   shippingDate: string;
+  rating: number;
   averageRating: string;
 }
 const DEFAULT_IMAGE_URL = require("../static/images/noImage.png");
@@ -42,6 +44,8 @@ const Card = (article: Article) => {
     imageUrl,
     description,
     shippingDate = "",
+    rating,
+    averageRating,
   } = article;
 
   return (
@@ -58,6 +62,10 @@ const Card = (article: Article) => {
       <Section>
         <div className={styles.description}>{description}</div>
       </Section>
+      <Section>
+        <StarRating rating={rating} averageRating={averageRating} />
+      </Section>
+
       <Section>
         <Fire />
         <span className={styles.sold}> 13 sold today</span>
